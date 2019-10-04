@@ -1,9 +1,13 @@
 {
   "name": "@jcesar.co/ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Interfaz de usuario para React Apps",
   "main": "lib/index.js",
   "types": "lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/llulioscesar/UI"
+  },
   "scripts": {
     "build": "tsc -p ."
   },
