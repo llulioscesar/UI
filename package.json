@@ -1,0 +1,21 @@
+{
+  "name": "@jcesar.co/ui",
+  "version": "0.0.1",
+  "description": "Interfaz de usuario para React Apps",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "keywords": [],
+  "author": "JCesar.co",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">=16.0.9"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.5",
+    "react": "^16.10.2",
+    "typescript": "^3.6.3"
+  }
+}
