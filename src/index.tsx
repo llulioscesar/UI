@@ -1,5 +1,8 @@
-import * as Components from './compoenets'
+import {Button} from "./compoenets/button";
+
+// CSS
+import './styles/color.css'
 
 export {
-    Components
+    Button
 }
