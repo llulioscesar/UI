@@ -1,8 +1,10 @@
-.boton{
+
+.boton {
     padding: 8px 16px;
     border-radius: 100px;
     min-width: 100px;
     border: none;
     background: var(--default);
     color: var(--default-text-button);
+    outline: none;
 }
