@@ -6,10 +6,12 @@ import {darken, opacify} from 'polished'
 
 type Props = {
     className?: string|undefined,
-    text?: string|undefined,
-    color?: string|undefined,
-    textColor?: string|undefined,
+    text?: string,
+    color?: string,
+    textColor?: string,
     style?: CSSProperties
+    full?: boolean,
+    width?: string,
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 };
 
@@ -43,14 +45,15 @@ button = styled(button)<Props>`
     border-radius: 100px;
     min-width: 100px;
     border: none;
-    background-color: ${ (props) => props.color || COLOR_DEFAULT };
-    color: ${(props) => props.textColor || COLOR_DEFAULT_BUTTON_TEXT};
+    width: ${(props) => props.width || (props.full ? '100%' : 'auto')}
+    background-color: ${ (props) => props.color };
+    color: ${(props) => props.textColor};
     outline: none;
     :hover {
-        box-shadow: -1px 1px 10px -3px ${(props) => opacify(0.7,props.color || COLOR_DEFAULT)};
+        box-shadow: -1px 1px 10px -3px ${(props) => opacify(0.7, `${props.color}`)};
     }
     :active {
-        background-color: ${(props) => darken(0.05, `${props.color}` || COLOR_DEFAULT)};
+        background-color: ${(props) => darken(0.05, `${props.color}`)};
     }
 `
 
