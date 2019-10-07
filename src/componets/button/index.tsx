@@ -1,7 +1,8 @@
 import React, {CSSProperties, FC, useEffect, useState} from 'react'
-import {COLOR_DEFAULT, COLOR_DEFAULT_BUTTON_TEXT} from '../../const/color'
-import styled from "styled-components";
+import {COLOR_DEFAULT, COLOR_WHITE} from '../../const/color'
+import styled, {withTheme, ThemeConsumer} from "styled-components";
 import {darken, opacify} from 'polished'
+import {Theme} from "../../const/theme";
 
 
 type Props = {
@@ -12,7 +13,9 @@ type Props = {
     style?: CSSProperties
     full?: boolean,
     width?: string,
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+    typeStyle?: "default"|"standar"|"danger"|"success"|"error",
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+    theme: Theme
 };
 
 function withDefault<T extends { defaultProps?: Partial<TDefaults> }, TDefaults>(o: T, defaultProps: TDefaults): T & { defaultProps: TDefaults } {
@@ -42,7 +45,7 @@ let button: FC<Props> = (props) => {
 
 button = styled(button)<Props>`
     padding: 8px 16px;
-    border-radius: 4px;
+    border-radius: 6px;
     min-width: 120px;
     font-family: "productsans";
     font-weight: normal
@@ -51,8 +54,14 @@ button = styled(button)<Props>`
     text-decoration: none;
     border: none;
     width: ${(props) => props.width || (props.full ? '100%' : 'auto')}
-    background-color: ${ (props) => props.color };
-    color: ${(props) => props.textColor};
+    background-color: ${
+        (props) => {
+            let color = props.color
+            
+            return ''
+        }
+    };
+    color: ${(props) => props.theme.buttonTextColor || props.textColor};
     outline: none;
     :hover {
         box-shadow: -1px 1px 10px -3px ${(props) => opacify(0.7, `${props.color}`)};
@@ -64,8 +73,9 @@ button = styled(button)<Props>`
 
 button.defaultProps = {
     color: COLOR_DEFAULT,
-    textColor: COLOR_DEFAULT_BUTTON_TEXT,
-    full: false
+    textColor: COLOR_WHITE,
+    full: false,
+    typeStyle: "default"
 }
 
-export const Button = button;
+export const Button = withTheme(button);

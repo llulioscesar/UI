@@ -1,4 +1,5 @@
-import { Button } from "./compoenets/button";
+import { Button } from "./componets/button";
+import { Dashboard } from './componets/dashboard';
 import './styles/app.css';
-export { Button };
+export { Dashboard, Button };
 //# sourceMappingURL=index.d.ts.map
