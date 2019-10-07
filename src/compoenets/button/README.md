@@ -8,8 +8,8 @@ Si desea cambiar el color del boton o el color del texto, se debe realizar por l
 | ---------- | ---------- | ---------- |
 | **color**  | rgb(0, 122, 255)| Color de fondo |
 | **textColor** | rgb(255, 255, 255) | Color del texto |
-| **text** | No tiene | Texto del boton |
-| **full** | No tiene | Toma el 100% del contenedor padre |
+| **text** |  | Texto del boton |
+| **full** | false | Toma el 100% del contenedor padre |
 
 ## Ejemplo
 ```TSX

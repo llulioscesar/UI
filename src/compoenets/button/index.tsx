@@ -59,7 +59,8 @@ button = styled(button)<Props>`
 
 button.defaultProps = {
     color: COLOR_DEFAULT,
-    textColor: COLOR_DEFAULT_BUTTON_TEXT
+    textColor: COLOR_DEFAULT_BUTTON_TEXT,
+    full: false
 }
 
 export const Button = button;
