@@ -1,4 +1,4 @@
 import { Button } from "./compoenets/button";
-import './styles/color.css';
+import './styles/app.css';
 export { Button };
 //# sourceMappingURL=index.d.ts.map

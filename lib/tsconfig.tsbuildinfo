@@ -630,12 +630,12 @@
         "signature": "86204d9f750dd9527eabcb692252593c0405b37fe21d391cbb118d4bbf1d1173"
       },
       "../src/compoenets/button/index.tsx": {
-        "version": "c8fd3fc1c99f0797df8092851e2fab84c2d27bdca2693b1b7a9fcb4befdcd057",
+        "version": "328a98513bece958146858a551279995932ecfe67595943ffc5b56de12c69ccc",
         "signature": "30ef9233e223931029e6c6f61a837663c5113505c9894898d051f9e7ede05805"
       },
       "../src/index.tsx": {
-        "version": "0201d2786eef77561f44f52a5a22622627e3ca69e2f4511c013674f935a3498e",
-        "signature": "9163ba1ae9da6ac9c2d274d93467dfdda2fe2d228edfd796697b0ccb231c0b59"
+        "version": "bed717d0eb017a629718bb6176c93f2fa1313beb6726add339d9400ebce00d0c",
+        "signature": "f6edacb0b1a81177a6b5b8c16b67b24bbde2545c7d97b4ac5011567f7faa2579"
       },
       "../node_modules/@types/lodash/ts3.1/common/common.d.ts": {
         "version": "4025cf62742c5bb3d383c8a62342481622c87e3397ea5e7b7baab18b9efd5798",

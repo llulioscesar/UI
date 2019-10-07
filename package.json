@@ -1,7 +1,7 @@
 {
   "name": "@jcesar.co/ui",
-  "version": "0.0.39",
-  "description": "Interfaz de usuario para React Apps",
+  "version": "0.0.45",
+  "description": "Interfaz de usuario para React Apps, inspirada en ios",
   "main": "lib/index.js",
   "types": "lib",
   "repository": {
@@ -11,7 +11,7 @@
   "scripts": {
     "prebuild": "rm -R ./lib && ./node_modules/.bin/gulp minify-css",
     "build": "tsc -p .",
-    "postbuild": "./node_modules/.bin/copyfiles -u 1 ./dist-css/**/*.css ./lib && ./node_modules/.bin/copyfiles -u 1 ./dist-css/**/**/*.css ./lib && rm -R ./dist-css"
+    "postbuild": "./node_modules/.bin/copyfiles -u 1 ./dist-css/**/*.css ./lib && ./node_modules/.bin/copyfiles -u 1 ./dist-css/**/**/*.css ./lib && rm -R ./dist-css && ./node_modules/.bin/copyfiles -u 1 ./src/fonts/**/*.* ./lib"
   },
   "keywords": [
     "react",

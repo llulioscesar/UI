@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "productsans";
+    src: url("../fonts/product-sans/bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "productsans";
+    src: url("../fonts/product-sans/bold-italic.ttf") format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "productsans";
+    src: url("../fonts/product-sans/light.ttf") format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: "productsans";
+    src: url("../fonts/product-sans/light-italic.ttf") format('truetype');
+    font-weight: lighter;
+    font-style: italic;
+}
+@font-face {
+    font-family: "productsans";
+    src: url("../fonts/product-sans/medium.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "productsans";
+    src: url("../fonts/product-sans/medium-italic.ttf") format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body{
+    margin: 0;
+}
+
+body, html, * {
+    font-family: "productsans"!important;
+    font-weight: normal!important;
+    font-size: medium!important;
+}

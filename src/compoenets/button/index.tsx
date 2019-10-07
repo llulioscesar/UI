@@ -42,8 +42,13 @@ let button: FC<Props> = (props) => {
 
 button = styled(button)<Props>`
     padding: 8px 16px;
-    border-radius: 100px;
-    min-width: 100px;
+    border-radius: 4px;
+    min-width: 120px;
+    font-family: "productsans";
+    font-weight: normal
+    text-align: center;
+    font-size: medium;
+    text-decoration: none;
     border: none;
     width: ${(props) => props.width || (props.full ? '100%' : 'auto')}
     background-color: ${ (props) => props.color };
