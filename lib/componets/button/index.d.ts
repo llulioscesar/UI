@@ -9,10 +9,12 @@ declare type Props = {
     style?: CSSProperties;
     full?: boolean;
     width?: string;
+    typeStyle?: "default" | "standar" | "danger" | "success" | "error";
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-    theme: Theme;
+    theme?: Theme;
+    invested?: boolean;
 };
-export declare const Button: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<Props>, "color" | "style" | "text" | "children" | "width" | "className" | "onClick" | "textColor" | "full"> & {
+export declare const Button: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<Props>, "color" | "style" | "text" | "children" | "width" | "className" | "onClick" | "textColor" | "full" | "typeStyle" | "invested"> & {
     theme?: any;
 }>;
 export {};

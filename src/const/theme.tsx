@@ -1,30 +1,30 @@
 import {COLOR_DEFAULT, COLOR_WHITE, COLOR_ERROR, COLOR_DANGER, COLOR_BLACK, COLOR_SUCCESS} from './color'
 
 export interface Theme {
-    color?:string,
-    colorSuccess?:string,
-    colorDanger?:string,
-    colorError?:string,
-    colorWhite?:string,
-    colorBlack?:string,
+    color:string,
+    colorSuccess:string,
+    colorDanger:string,
+    colorError:string,
+    colorWhite:string,
+    colorBlack:string,
     buttons:{
         default:{
             text:string,
             color:string
         },
-        standar?:{
+        standar:{
             text:string,
             color:string
         },
-        success?:{
+        success:{
             text:string,
             color:string
         },
-        danger?:{
+        danger:{
             text:string,
             color:string
         },
-        error?:{
+        error:{
             text:string,
             color:string
         }
