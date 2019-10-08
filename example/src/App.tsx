@@ -1,12 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 // @ts-ignore
-import {Button, Dashboard} from '@jcesar.co/ui'
+import {Button, Dashboard, NavigationBar} from '@jcesar.co/ui'
 
 const App: React.FC = () => {
-  return (
-    <Dashboard>
-      <Button text='Click'/>
-    </Dashboard>
+
+    const [large, setLarge] = useState(false)
+
+    return (
+        <Dashboard
+            renderNavigationBar={
+                <NavigationBar title='Finca Report' large={large}>
+                    <button>Atras</button>
+                </NavigationBar>
+            }
+        >
+            <h1>dfgdfg</h1>
+            <Button text='Click' onClick={() => setLarge(!large)}/>
+        </Dashboard>
   );
 }
 

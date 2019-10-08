@@ -1,7 +1,7 @@
 /// <reference types="styled-components" />
 import React, { CSSProperties } from 'react';
 import { Theme } from "../../const/theme";
-declare type Props = {
+interface Button {
     className?: string | undefined;
     text?: string;
     color?: string;
@@ -13,8 +13,8 @@ declare type Props = {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     theme?: Theme;
     invested?: boolean;
-};
-export declare const Button: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<Props>, "color" | "style" | "text" | "children" | "width" | "className" | "onClick" | "textColor" | "full" | "typeStyle" | "invested"> & {
+}
+export declare const Button: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<Button>, "color" | "style" | "text" | "children" | "width" | "className" | "onClick" | "textColor" | "full" | "typeStyle" | "invested"> & {
     theme?: any;
 }>;
 export {};

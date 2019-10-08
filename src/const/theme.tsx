@@ -1,7 +1,8 @@
-import {COLOR_DEFAULT, COLOR_WHITE, COLOR_ERROR, COLOR_DANGER, COLOR_BLACK, COLOR_SUCCESS} from './color'
+import {COLOR_DEFAULT, COLOR_WHITE, COLOR_ERROR, COLOR_DANGER, COLOR_BLACK, COLOR_SUCCESS, COLOR_BASE} from './color'
 
 export interface Theme {
     color:string,
+    colorBase:string,
     colorSuccess:string,
     colorDanger:string,
     colorError:string,
@@ -33,6 +34,7 @@ export interface Theme {
 
 export const DefaultTheme: Theme = {
     color: COLOR_DEFAULT,
+    colorBase: COLOR_BASE,
     colorDanger: COLOR_DANGER,
     colorError: COLOR_ERROR,
     colorSuccess: COLOR_SUCCESS,

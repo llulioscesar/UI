@@ -5,7 +5,7 @@ import {darken, opacify} from 'polished'
 import {DefaultTheme, Theme} from "../../const/theme";
 
 
-type Props = {
+interface Button {
     className?: string|undefined,
     text?: string,
     color?: string,
@@ -19,7 +19,27 @@ type Props = {
     invested?: boolean
 };
 
-const getColor = (props:Props): string => {
+let button: FC<Button> = (props) => {
+
+    // getComputedStyle(document.body).getPropertyValue('--default')
+
+    const click = (event: React.MouseEvent<HTMLButtonElement>) => {
+        if (props.onClick !== undefined) {
+            props.onClick(event)
+        }
+    }
+
+    return (
+        <button
+            className={props.className}
+            onClick={event => click(event)}
+            style={props.style}>
+            {props.text}
+        </button>
+    )
+};
+
+const getColor = (props:Button): string => {
     let color = (props.color || COLOR_DEFAULT)
 
     if (props.color === undefined) {
@@ -49,7 +69,7 @@ const getColor = (props:Props): string => {
     return color
 }
 
-const getTextColor = (props:Props):string => {
+const getTextColor = (props:Button):string => {
     let color = (props.textColor||COLOR_WHITE)
 
     if (props.color === undefined) {
@@ -79,30 +99,10 @@ const getTextColor = (props:Props):string => {
     return color
 }
 
-let button: FC<Props> = (props) => {
-
-    // getComputedStyle(document.body).getPropertyValue('--default')
-
-    const click = (event: React.MouseEvent<HTMLButtonElement>) => {
-        if (props.onClick !== undefined) {
-            props.onClick(event)
-        }
-    }
-
-    return (
-        <button
-            className={props.className}
-            onClick={event => click(event)}
-            style={props.style}>
-            {props.text}
-        </button>
-    )
-};
-
-button = styled(button)<Props>`
+button = styled(button)<Button>`
     padding: 8px 16px;
     border-radius: 6px;
-    font-family: "productsans";
+    font-family: "sf-pro!important";
     font-weight: normal
     text-align: center;
     font-size: medium;
@@ -127,5 +127,8 @@ button.defaultProps = {
     invested: false,
     width: '120px'
 }
+
+// @ts-ignore
+button.type = 'Button'
 
 export const Button = withTheme(button);

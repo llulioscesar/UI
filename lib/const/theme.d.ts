@@ -1,5 +1,6 @@
 export interface Theme {
     color: string;
+    colorBase: string;
     colorSuccess: string;
     colorDanger: string;
     colorError: string;
