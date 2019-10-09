@@ -5,12 +5,15 @@ declare type Props = {
     children?: Element | ReactNode | FunctionComponent<{}> | ComponentClass<{}>;
     theme?: Theme;
     color?: string;
+    textColor?: string;
+    titleColor?: string;
     style?: CSSProperties;
     className?: string | undefined;
     large?: boolean;
     title?: string;
+    subTitle?: string;
 };
-export declare const NavigationBar: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<Props>, "color" | "style" | "large" | "title" | "children" | "className"> & {
+export declare const NavigationBar: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<Props>, "color" | "style" | "large" | "title" | "children" | "className" | "textColor" | "titleColor" | "subTitle"> & {
     theme?: any;
 }>;
 export {};

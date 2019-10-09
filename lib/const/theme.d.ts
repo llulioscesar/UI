@@ -28,6 +28,11 @@ export interface Theme {
             color: string;
         };
     };
+    navigationBar: {
+        color: string;
+        text: string;
+        title: string;
+    };
 }
 export declare const DefaultTheme: Theme;
 //# sourceMappingURL=theme.d.ts.map

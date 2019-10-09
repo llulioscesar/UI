@@ -29,6 +29,11 @@ export interface Theme {
             text:string,
             color:string
         }
+    },
+    navigationBar:{
+        color:string,
+        text:string;
+        title:string
     }
 }
 
@@ -61,5 +66,10 @@ export const DefaultTheme: Theme = {
             text: COLOR_WHITE,
             color: COLOR_ERROR
         }
+    },
+    navigationBar:{
+        color:COLOR_BASE,
+        title: COLOR_BLACK,
+        text: COLOR_DEFAULT
     }
 }

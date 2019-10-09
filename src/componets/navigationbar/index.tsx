@@ -1,21 +1,22 @@
 import React, {ComponentClass, CSSProperties, FC, FunctionComponent, ReactNode} from "react";
 import styled, {withTheme} from 'styled-components'
 import {DefaultTheme, Theme} from "../../const/theme";
-import {COLOR_BASE, COLOR_DEFAULT} from "../../const/color";
+import {COLOR_BASE} from "../../const/color";
 
 type Props = {
     children?: Element|ReactNode|FunctionComponent<{}>|ComponentClass<{}>,
     theme?: Theme,
     color?: string,
+    textColor?: string,
+    titleColor?: string,
     style?: CSSProperties,
     className?: string|undefined,
     large?:boolean
-    title?: string
+    title?: string,
+    subTitle?: string,
 }
 
 let navigationBar: FC<Props> = (props) => {
-
-
     return (
         <div className={props.className} style={props.style}>
             {
@@ -55,8 +56,18 @@ let navigationBar: FC<Props> = (props) => {
 
 const getColor = (props:Props):string => {
     // @ts-ignore
-    let color = props.color || props.theme.colorBase || COLOR_BASE
+    let color = props.color || props.theme.navigationBar.color || COLOR_BASE
     return color
+}
+
+const getTextColor = (props:Props): string => {
+    // @ts-ignore
+    return props.textColor || props.theme.navigationBar.text
+}
+
+const getTitleColor = (props:Props): string => {
+    // @ts-ignore
+    return props.titleColor || props.theme.navigationBar.title
 }
 
 navigationBar = styled(navigationBar)<Props>`
@@ -93,11 +104,26 @@ navigationBar = styled(navigationBar)<Props>`
         font-weight: bold!important;
         display: ${(props) => props.large ? 'block':'unset'};
         font-size: ${(props) => props.large ? '2.3125rem!important' : '1.0625rem!important'};
-        color: black;
+        color: ${(props) => getTitleColor(props)};
         max-height: 52px;
         height: ${(props) => props.large ? '52px':'auto'};
         width: ${(props) => props.large ? '100%' : 'auto'};
         text-align: left;
+    }
+    
+    .ui-navigation-bar-link {
+        color: ${(props) => getTextColor(props)};
+        font-size: 13px;
+        display: flex;
+        flex:1;
+        align-items: center;
+    }
+    
+    .ui-navigation-bar-link > svg {
+        fill: ${(props) => getTextColor(props)};
+        width:30px;
+        height:30px;
+        margin-rigth:8px;
     }
     
     @media (max-width:767px){
