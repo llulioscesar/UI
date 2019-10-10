@@ -24,6 +24,7 @@ const navigationBarLink: FC<Props> = (props) => {
         <div className='ui-navigation-bar-link' onClick={(e) => click(e)}>
             {props.icon !== undefined && props.icon}
             {props.text !== undefined && props.text}
+            { props.text === undefined && props.icon === undefined && props.children}
         </div>
     );
 }

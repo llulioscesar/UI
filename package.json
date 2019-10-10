@@ -14,7 +14,7 @@
     "postbuild": "./node_modules/.bin/copyfiles -u 1 ./dist-css/**/*.css ./lib && ./node_modules/.bin/copyfiles -u 1 ./dist-css/**/**/*.css ./lib && rm -R ./dist-css && ./node_modules/.bin/copyfiles -u 1 ./src/fonts/**/*.* ./lib",
     "predev": "rm -R ./lib && ./node_modules/.bin/gulp minify-css",
     "dev": "tsc -p .",
-    "postdev": "./node_modules/.bin/copyfiles -u 1 ./dist-css/**/*.css ./lib && ./node_modules/.bin/copyfiles -u 1 ./dist-css/**/**/*.css ./lib && rm -R ./dist-css && ./node_modules/.bin/copyfiles -u 1 ./src/fonts/**/*.* ./lib && "
+    "postdev": "./node_modules/.bin/copyfiles -u 1 ./dist-css/**/*.css ./lib && ./node_modules/.bin/copyfiles -u 1 ./dist-css/**/**/*.css ./lib && rm -R ./dist-css && ./node_modules/.bin/copyfiles -u 1 ./src/fonts/**/*.* ./lib && cp -r ./lib ./example/node_modules/@jcesar.co/ui && cp -r ./src ./example/node_modules/@jcesar.co/ui"
   },
   "keywords": [
     "react",

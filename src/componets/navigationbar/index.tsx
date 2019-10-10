@@ -2,6 +2,7 @@ import React, {ComponentClass, CSSProperties, FC, FunctionComponent, ReactNode} 
 import styled, {withTheme} from 'styled-components'
 import {DefaultTheme, Theme} from "../../const/theme";
 import {COLOR_BASE} from "../../const/color";
+import {darken} from "polished";
 
 type Props = {
     children?: Element|ReactNode|FunctionComponent<{}>|ComponentClass<{}>,
@@ -77,6 +78,9 @@ navigationBar = styled(navigationBar)<Props>`
     height:${(props) => props.large ? '102px' : '50px'};
     align-items: center;
     background: ${(props) => getColor(props)};
+    border-bottom: 1px solid #dddddf;
+    
+    
     
     .ui-navigation-bar-container {
         padding: 0 15px;
@@ -93,37 +97,62 @@ navigationBar = styled(navigationBar)<Props>`
         min-height:44px;
         max-height:44px
         display:flex;
-        flex:1;
         align-items: center;
         width:100%;
         justify-content: space-between;
+        position:relative;
     }
     
     .ui-navigation-bar-title {
         font-style: normal;
         font-weight: bold!important;
         display: ${(props) => props.large ? 'block':'unset'};
-        font-size: ${(props) => props.large ? '2.3125rem!important' : '1.0625rem!important'};
+        font-size: ${(props) => props.large ? '34px!important' : '17px!important'};
         color: ${(props) => getTitleColor(props)};
         max-height: 52px;
         height: ${(props) => props.large ? '52px':'auto'};
-        width: ${(props) => props.large ? '100%' : 'auto'};
-        text-align: left;
+        width: 100%;
+        text-align: ${(props) => props.large ? 'left' : 'center'};
+        position: ${(props) => props.large ? 'relative': 'absolute'};
+        top: ${(props) => props.large ? '0%': 'calc(50% - 20px)'};
+        transform: ${(props) => props.large ? 'none': 'translateY(50%)'};
+        z-index:1
     }
     
     .ui-navigation-bar-link {
         color: ${(props) => getTextColor(props)};
-        font-size: 13px;
         display: flex;
-        flex:1;
         align-items: center;
+        cursor:pointer;
+        font-size: 17px;
     }
     
+    .ui-navigation-bar-controls > svg,
+    .ui-navigation-bar-panel > svg,
     .ui-navigation-bar-link > svg {
         fill: ${(props) => getTextColor(props)};
         width:30px;
         height:30px;
-        margin-rigth:8px;
+        margin-rigth:0px;
+        cursor:pointer;
+    }
+    
+    .ui-navigation-bar-controls > svg:active,
+    .ui-navigation-bar-panel > svg:active,
+    .ui-navigation-bar-link:active > svg {
+        fill: ${(props) => darken(0.1, getTextColor(props))}!important; 
+    }
+    
+    .ui-navigation-bar-link:active {
+        color: ${(props) => darken(0.1, getTextColor(props))}!important;
+    }
+    
+    .ui-navigation-bar-panel {
+        display:flex;
+        color:${(props) => getTextColor(props)}!important;
+        align-items: center;
+        z-index: 10;
+        font-size: 17px;
     }
     
     @media (max-width:767px){

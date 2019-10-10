@@ -634,7 +634,7 @@
         "signature": "ee1738e4c17bd1c082168009dd7f660a8cf21e2212045355dd0cf928acedd752"
       },
       "../src/componets/button/index.tsx": {
-        "version": "73dd35748baa750e35cb2ce0c9840d92dbc9a9bf9167d43c3c7c4ac530546db7",
+        "version": "383307a03ead53f3701060ff0df6d46efdd32a5477adbb35364147882a9417eb",
         "signature": "7b6afce2043dbda36cddee9daf155a448f1fa2d03df08b122f77c4cbd219b6cb"
       },
       "../src/componets/dashboard/index.tsx": {
@@ -642,16 +642,20 @@
         "signature": "bdc8d9566a68c495c082fae8d3cfc1627bb236efa5a8e54d6f1dfb3df2b047c7"
       },
       "../src/componets/navigationbarlink/index.tsx": {
-        "version": "e500186a8b33386e8249c08faa54de8e669386ee056248b465dc59201e9f6444",
+        "version": "cb027c43f996cb1e55d62b584c9a4489e1ecba3a9c5f0a5703a17ae6b6e798f3",
         "signature": "36b2efa2966e2ad9d719c004e1f2c3db656885915f42fdeb47947f067e995bf9"
       },
       "../src/componets/navigationbar/index.tsx": {
-        "version": "4bb8758572b25ea5c26adfab03b3dfe5ee0b3fa33c2bd4b3d9a3093d2fcf813c",
+        "version": "245699f27023a22d36682fccce68a5505d07154ee0e8d229e2147bdb0761f9f1",
         "signature": "c8c34ca476f8778065c3d22de5a66073e1000025efe92c6317001b8f804e4b46"
       },
+      "../src/componets/navigationbarpanel/index.tsx": {
+        "version": "8ba45595c469cc4b5315d3dea188509fa695f8ff2992cb627bbdade946ff2ae0",
+        "signature": "d478c8a8b92a7674ceca818a8fbf0e9a63ac409198289469f63abe7c2259a461"
+      },
       "../src/index.tsx": {
-        "version": "a27f022e9b2c3b3e29971969bf857ba85f7516169c6cbcfce9a01812d13af04a",
-        "signature": "592cfbbe477f80ca4ee312ca1e32349663699dca0a93acb6e6b9b7c94d4a5ac8"
+        "version": "eeda2944359e225c09a1bb88c75f2b62882e041251723cff90856d400f38efcb",
+        "signature": "418d548d6d3c010ca674f4d6e0973e20bbbe7ca2a2cc7d5417faac374449771c"
       },
       "../node_modules/@types/lodash/ts3.1/common/common.d.ts": {
         "version": "4025cf62742c5bb3d383c8a62342481622c87e3397ea5e7b7baab18b9efd5798",
@@ -1598,6 +1602,12 @@
         "../node_modules/@types/styled-components/index.d.ts",
         "../src/const/theme.tsx",
         "../src/const/color.tsx",
+        "../node_modules/polished/lib/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/componets/navigationbarpanel/index.tsx": [
+        "../node_modules/@types/react/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1606,6 +1616,7 @@
         "../src/componets/dashboard/index.tsx",
         "../src/componets/navigationbarlink/index.tsx",
         "../src/componets/navigationbar/index.tsx",
+        "../src/componets/navigationbarpanel/index.tsx",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1954,7 +1965,8 @@
         "../src/componets/button/index.tsx",
         "../src/componets/dashboard/index.tsx",
         "../src/componets/navigationbarlink/index.tsx",
-        "../src/componets/navigationbar/index.tsx"
+        "../src/componets/navigationbar/index.tsx",
+        "../src/componets/navigationbarpanel/index.tsx"
       ],
       "../src/componets/dashboard/index.tsx": [
         "../node_modules/@types/react/index.d.ts",
@@ -1970,6 +1982,9 @@
         "../node_modules/@types/react/global.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/componets/navigationbarpanel/index.tsx": [
+        "../node_modules/@types/react/index.d.ts"
       ],
       "../src/componets/navigationbarlink/index.tsx": [
         "../node_modules/@types/react/index.d.ts"
@@ -3019,6 +3034,7 @@
       "../src/componets/dashboard/index.tsx",
       "../src/componets/navigationbarlink/index.tsx",
       "../src/componets/navigationbar/index.tsx",
+      "../src/componets/navigationbarpanel/index.tsx",
       "../src/index.tsx",
       "../node_modules/@types/lodash/ts3.1/common/common.d.ts",
       "../node_modules/@types/lodash/ts3.1/common/array.d.ts",

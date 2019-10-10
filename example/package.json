@@ -10,11 +10,12 @@
     "@types/react-dom": "16.9.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-ionicons": "^3.0.1",
     "react-scripts": "3.2.0",
     "typescript": "3.6.4"
   },
   "scripts": {
-    "prestart": "npm run build --prefix ../ && yarn upgrade @jcesar.co/ui",
+    "5prestart": "npm run build --prefix ../ && yarn upgrade @jcesar.co/ui",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

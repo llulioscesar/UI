@@ -34,7 +34,7 @@ let button: FC<Button> = (props) => {
             className={props.className}
             onClick={event => click(event)}
             style={props.style}>
-            {props.text}
+            {props.text || props.children}
         </button>
     )
 };
